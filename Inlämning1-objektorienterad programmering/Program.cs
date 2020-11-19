@@ -7,8 +7,10 @@ namespace Inlämning1_objektorienterad_programmering
     class Program
     {
         static void Main(string[] args)
-        {
+        {   
+            //EMPTY LIST CREATED
             List<int> resultList = new List<int>();
+            
             do
             {
 
@@ -43,41 +45,32 @@ namespace Inlämning1_objektorienterad_programmering
             if (firstOperatorInChar == '+' && secondOperatorInChar== '+')
             {
                int result = AdditionAddition(firstTermInInt, secondTermInInt, thirdTermInInt);
-                Console.WriteLine("Result: " + result);
-                resultList.Add(result);
-
-                    if (result == 100)
-                    {
-                        Congrats();
-                    }
-                    else if (result < 100)
-                    {
-                        LessThanAHundred();
-                    }
-                    else if (result > 100)
-                    {
-                        MoreThanAHundred();
-                    }
-                }
+               Console.WriteLine("Result: " + result);
+               resultList.Add(result);
+               Console.WriteLine (messageToUser(result));
+            }
 
             else if (firstOperatorInChar == '+' && secondOperatorInChar == '-')
             {
                 int result = AdditionSubtraction(firstTermInInt, secondTermInInt, thirdTermInInt);
                 Console.WriteLine("Result: " + result);
-                resultList.Add(result);             
+                resultList.Add(result);
+                Console.WriteLine(messageToUser(result));
             }
             else if (firstOperatorInChar == '+' && secondOperatorInChar == '*')
             {
                 int result = AdditionTimes(firstTermInInt, secondTermInInt, thirdTermInInt);
                 Console.WriteLine("Result: " + result);            
-                resultList.Add(result);               
-                }
+                resultList.Add(result);
+                Console.WriteLine(messageToUser(result));
+            }
             else if (firstOperatorInChar == '+' && secondOperatorInChar == '/')
             {
                 int result = AdditionDivided(firstTermInInt, secondTermInInt, thirdTermInInt);
                 Console.WriteLine("Result: " + result);
                 resultList.Add(result);
-                }
+                Console.WriteLine(messageToUser(result));
+            }
 
             //VALID CODE IF OPERATOR 1 IS -
             if (firstOperatorInChar == '-' && secondOperatorInChar == '+')
@@ -85,28 +78,30 @@ namespace Inlämning1_objektorienterad_programmering
                 int result = SubtractionAddition(firstTermInInt, secondTermInInt, thirdTermInInt);
                 Console.WriteLine("Result: " + result);
                 resultList.Add(result);
-                }
+                Console.WriteLine(messageToUser(result));
+            }
 
             else if (firstOperatorInChar == '-' && secondOperatorInChar == '-')
             {
                 int result = SubtractionSubtraction(firstTermInInt, secondTermInInt, thirdTermInInt);
                 Console.WriteLine("Result: " + result);
                 resultList.Add(result);
-
-                }
+                Console.WriteLine(messageToUser(result));
+            }
             else if (firstOperatorInChar == '-' && secondOperatorInChar == '*')
             {
                 int result = SubtractionTimes(firstTermInInt, secondTermInInt, thirdTermInInt);
                 Console.WriteLine("Result: " + result);
                 resultList.Add(result);
-
-                }
+                Console.WriteLine(messageToUser(result));
+            }
             else if (firstOperatorInChar == '-' && secondOperatorInChar == '/')
             {
                 int result = SubtractionDivided(firstTermInInt, secondTermInInt, thirdTermInInt);
                 Console.WriteLine("Result: " + result);
                 resultList.Add(result);
-                }
+                Console.WriteLine(messageToUser(result));
+            }
 
             //VALID CODE IF OPERATOR 1 IS *
             if (firstOperatorInChar == '*' && secondOperatorInChar == '+')
@@ -114,25 +109,29 @@ namespace Inlämning1_objektorienterad_programmering
                 int result = TimesAddition(firstTermInInt, secondTermInInt, thirdTermInInt);
                 Console.WriteLine("Result: " + result);
                 resultList.Add(result);
-                }
+                Console.WriteLine(messageToUser(result));
+            }
 
             else if (firstOperatorInChar == '*' && secondOperatorInChar == '-')
             {
                 int result = TimesSubtraction(firstTermInInt, secondTermInInt, thirdTermInInt);
                 Console.WriteLine("Result: " + result);
                 resultList.Add(result);
+                Console.WriteLine(messageToUser(result));
             }
             else if (firstOperatorInChar == '*' && secondOperatorInChar == '*')
             {
                 int result = TimesTimes(firstTermInInt, secondTermInInt, thirdTermInInt);
                 Console.WriteLine("Result: " + result);
                 resultList.Add(result);
-             }
+                Console.WriteLine(messageToUser(result));
+            }
             else if (firstOperatorInChar == '*' && secondOperatorInChar == '/')
             {
                 int result = TimesDivided(firstTermInInt, secondTermInInt, thirdTermInInt);
                 Console.WriteLine("Result: " + result);
                 resultList.Add(result);
+                Console.WriteLine(messageToUser(result));
             }
 
             //VALID CODE IF OPERATOR 1 IS /
@@ -141,6 +140,7 @@ namespace Inlämning1_objektorienterad_programmering
                 int result = DividedAddition(firstTermInInt, secondTermInInt, thirdTermInInt);
                 Console.WriteLine("Result: " + result);
                 resultList.Add(result);
+                Console.WriteLine(messageToUser(result));
             }
 
             else if (firstOperatorInChar == '/' && secondOperatorInChar == '-')
@@ -148,6 +148,7 @@ namespace Inlämning1_objektorienterad_programmering
                 int result = DividedSubtraction(firstTermInInt, secondTermInInt, thirdTermInInt);
                 Console.WriteLine("Result: " + result);
                 resultList.Add(result);
+                Console.WriteLine(messageToUser(result));
 
             }
             else if (firstOperatorInChar == '/' && secondOperatorInChar == '*')
@@ -155,14 +156,17 @@ namespace Inlämning1_objektorienterad_programmering
                 int result = DividedTimes(firstTermInInt, secondTermInInt, thirdTermInInt);
                 Console.WriteLine("Result: " + result);
                 resultList.Add(result);
-
+                Console.WriteLine(messageToUser(result));
             }
             else if (firstOperatorInChar == '/' && secondOperatorInChar == '/')
             {
                 int result = DividedDivided(firstTermInInt, secondTermInInt, thirdTermInInt);
                 Console.WriteLine("Result: " + result);
                 resultList.Add(result);
+                Console.WriteLine(messageToUser(result));
             }
+
+                
 
             Console.WriteLine("Want another round?", "Yes/No");
             string answerInString = Console.ReadLine();
@@ -177,17 +181,12 @@ namespace Inlämning1_objektorienterad_programmering
             {
                 Console.WriteLine("Thanks for playing, sum of all rounds is: ");
                 Console.WriteLine(resultList.Sum());
-                Console.WriteLine("All of your entered numbers:");
+                Console.WriteLine("All of your equation results:");
                 Console.WriteLine(string.Join(',', resultList));
                 
                 break;
             }
         } while (true);
-
-
-
-
-
 
 
 
@@ -285,24 +284,33 @@ namespace Inlämning1_objektorienterad_programmering
                 return result;
             }
 
-            //METHOD TO WRITE DIFFERENT MESSAGES DEPENDING ON VALUE ==100 || < 100 
+            //METHOD TO SHOW DIFFERENT MESSAGES DEPENDING ON EQUATION RESULT
 
-            static void Congrats()
-            {           
-               Console.WriteLine("Cool, you now have a hundred, clap clap");             
-            }
-
-            static void LessThanAHundred()
+           static string messageToUser(int equationResult)
             {
-                Console.WriteLine("Less than a hundred");
+                
+                if (equationResult == 100)
+                {
+                    string messageHundred = "Cool, you now have a hundred";
+                    return messageHundred;
+                }
+                else if (equationResult<100)
+                {
+                    string messageLess = "Less than a hundred";
+                    return messageLess;
+                }
+                else if (equationResult> 100)
+                {
+                    string messageMore = "More than a hundred";
+                    return messageMore;
+                }
+                string messageDefault = "Nothing";//MESSAGE ADDED ONLY TO SOLVE CS0161, THIS CODE WILL NEVER RUN
+                return messageDefault;
+
+            }
+                 
             }
 
-            static void MoreThanAHundred()
-            {
-                Console.WriteLine("Less than a hundred");
-            }         
-                        
-            }
             
             
         }   
