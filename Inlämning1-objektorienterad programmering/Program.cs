@@ -296,12 +296,12 @@ namespace Inlämning1_objektorienterad_programmering
                 }
                 else if (equationResult<100)
                 {
-                    string messageLess = "Less than a hundred";
+                    string messageLess = "The sum is less than a hundred";
                     return messageLess;
                 }
                 else if (equationResult> 100)
                 {
-                    string messageMore = "More than a hundred";
+                    string messageMore = "The sum is more than a hundred";
                     return messageMore;
                 }
                 string messageDefault = "Nothing";//MESSAGE ADDED ONLY TO SOLVE CS0161, THIS CODE WILL NEVER RUN
